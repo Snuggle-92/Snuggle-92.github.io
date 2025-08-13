@@ -91,32 +91,32 @@
 
   <div class="project-item">
     1. FireFOX3 -&gt; INSIDE : HTTP, TELNET 접속
-    <button onclick="showImage('cisco1')">RESULT</button>
-    <img id="cisco1" src="images/cisco1.jpg" alt="CISCO ASAv ACL TEST 1" />
+    <button onclick="showImage(['1FF3_IN_http.JPG'])">RESULT</button>
+    <img src="images/1FF3_IN_http.JPG" alt="CISCO ASAv ACL TEST 1" />
   </div>
 
   <div class="project-item">
     2. Webterm2 -&gt; DMZ : TELNET 접속
-    <button onclick="showImage('cisco2')">RESULT</button>
-    <img id="cisco2" src="images/cisco2.jpg" alt="CISCO ASAv ACL TEST 2" />
+    <button onclick="showImage(['2W2_DMZ_telnet.JPG'])">RESULT</button>
+    <img src="images/2W2_DMZ_telnet.JPG" alt="CISCO ASAv ACL TEST 2" />
   </div>
 
   <div class="project-item">
     3. PC1 -&gt; Webterm1 : Ping 가능
-    <button onclick="showImage('cisco3')">RESULT</button>
-    <img id="cisco3" src="images/cisco3.jpg" alt="CISCO ASAv ACL TEST 3" />
+    <button onclick="showImage(['3PC1_W1_ping.JPG'])">RESULT</button>
+    <img src="images/3PC1_W1_ping.JPG" alt="CISCO ASAv ACL TEST 3" />
   </div>
 
   <div class="project-item">
     4. Webterm1 -&gt; R1 : HTTP, TELNET 접속
-    <button onclick="showImage('cisco4')">RESULT</button>
-    <img id="cisco4" src="images/cisco4.jpg" alt="CISCO ASAv ACL TEST 4" />
+    <button onclick="showImage(['4W1_DMZ_http_telnet.JPG'])">RESULT</button>
+    <img src="images/4W1_DMZ_http_telnet.JPG" alt="CISCO ASAv ACL TEST 4" />
   </div>
 
   <div class="project-item">
     5. Webterm2 -&gt; PC1 : Ping 가능
-    <button onclick="showImage('cisco5')">RESULT</button>
-    <img id="cisco5" src="images/cisco5.jpg" alt="CISCO ASAv ACL TEST 5" />
+    <button onclick="showImage(['5W2_IN_ping.JPG'])">RESULT</button>
+    <img src="images/5W2_IN_ping.JPG" alt="CISCO ASAv ACL TEST 5" />
   </div>
 </section>
 
@@ -125,66 +125,33 @@
 
   <div class="project-item">
     1. Win10 -&gt; OSSEC : http, ping 탐지
-    <button onclick="showImage('snort1')">RESULT</button>
-    <img id="snort1" src="images/snort1.jpg" alt="SNORT3 RULE TEST 1" />
+    <button onclick="showImage(['1W10_OE_ping.JPG', '1W10_OE_http.JPG'])">RESULT</button>
+    <img src="images/1W10_OE_ping.JPG" alt="SNORT3 RULE TEST 1-1" />
+    <img src="images/1W10_OE_http.JPG" alt="SNORT3 RULE TEST 1-2" />
   </div>
 
   <div class="project-item">
     2. CentOS7 -&gt; Win10 : ping 탐지
-    <button onclick="showImage('snort2')">RESULT</button>
-    <img id="snort2" src="images/snort2.jpg" alt="SNORT3 RULE TEST 2" />
+    <button onclick="showImage(['2CS_W10_ping.JPG'])">RESULT</button>
+    <img src="images/2CS_W10_ping.JPG" alt="SNORT3 RULE TEST 2" />
   </div>
 
   <div class="project-item">
     3. HIDS -&gt; CentOS7 : /etc/passwd command injection 공격 탐지
-    <button onclick="showImage('snort3')">RESULT</button>
-    <img id="snort3" src="images/snort3.jpg" alt="SNORT3 RULE TEST 3" />
+    <button onclick="showImage(['3HD_CS_passwd.JPG'])">RESULT</button>
+    <img src="images/3HD_CS_passwd.JPG" alt="SNORT3 RULE TEST 3" />
   </div>
 
   <div class="project-item">
     4. Kali -&gt; Win10 : Rand Source Attack DDoS 공격 탐지
-    <button onclick="showImage('snort4')">RESULT</button>
-    <img id="snort4" src="images/snort4.jpg" alt="SNORT3 RULE TEST 4" />
+    <button onclick="showImage(['4Kali_W10_DDoS.JPG'])">RESULT</button>
+    <img src="images/4Kali_W10_DDoS.JPG" alt="SNORT3 RULE TEST 4" />
   </div>
 
   <div class="project-item">
     5. Kali -&gt; CentOS7 : SYN Flag Scanning 탐지
-    <button onclick="showImage('snort5')">RESULT</button>
-    <img id="snort5" src="images/snort5.jpg" alt="SNORT3 RULE TEST 5" />
-  </div>
-</section>
-
-<section class="project">
-  <h2>&lt; SURICATA RULE TEST &gt;</h2>
-
-  <div class="project-item">
-    1. Win10 -&gt; OSSEC : http, ping 탐지
-    <button onclick="showImage('suricata1')">RESULT</button>
-    <img id="suricata1" src="images/suricata1.jpg" alt="SURICATA RULE TEST 1" />
-  </div>
-
-  <div class="project-item">
-    2. CentOS7 -&gt; Win10 : ping 탐지
-    <button onclick="showImage('suricata2')">RESULT</button>
-    <img id="suricata2" src="images/suricata2.jpg" alt="SURICATA RULE TEST 2" />
-  </div>
-
-  <div class="project-item">
-    3. HIDS -&gt; CentOS7 : /etc/passwd command injection 공격 탐지
-    <button onclick="showImage('suricata3')">RESULT</button>
-    <img id="suricata3" src="images/suricata3.jpg" alt="SURICATA RULE TEST 3" />
-  </div>
-
-  <div class="project-item">
-    4. Kali -&gt; Win10 : Rand Source Attack DDoS 공격 탐지
-    <button onclick="showImage('suricata4')">RESULT</button>
-    <img id="suricata4" src="images/suricata4.jpg" alt="SURICATA RULE TEST 4" />
-  </div>
-
-  <div class="project-item">
-    5. Kali -&gt; CentOS7 : SYN Flag Scanning 탐지
-    <button onclick="showImage('suricata5')">RESULT</button>
-    <img id="suricata5" src="images/suricata5.jpg" alt="SURICATA RULE TEST 5" />
+    <button onclick="showImage(['5kali_CS_SYN.JPG'])">RESULT</button>
+    <img src="images/5kali_CS_SYN.JPG" alt="SNORT3 RULE TEST 5" />
   </div>
 </section>
 
@@ -193,14 +160,14 @@
 
   <div class="project-item">
     1. SERVER -&gt; AGENT 등록
-    <button onclick="showImage('ossec1')">RESULT</button>
-    <img id="ossec1" src="images/ossec1.jpg" alt="OSSEC TEST 1" />
+    <button onclick="showImage(['HIDS_AG_1.JPG'])">RESULT</button>
+    <img src="images/HIDS_AG_1.JPG" alt="OSSEC TEST 1" />
   </div>
 
   <div class="project-item">
     2. SERVER -&gt; AGENT 감지
-    <button onclick="showImage('ossec2')">RESULT</button>
-    <img id="ossec2" src="images/ossec2.jpg" alt="OSSEC TEST 2" />
+    <button onclick="showImage(['HIDS_AG_2.JPG'])">RESULT</button>
+    <img src="images/HIDS_AG_2.JPG" alt="OSSEC TEST 2" />
   </div>
 </section>
 
@@ -209,8 +176,8 @@
 
   <div class="project-item">
     1. 정상 동작 확인
-    <button onclick="showImage('openvpn1')">RESULT</button>
-    <img id="openvpn1" src="images/openvpn1.jpg" alt="OpenVPN TEST 1" />
+    <button onclick="showImage(['openvpn.JPG'])">RESULT</button>
+    <img src="images/openvpn.JPG" alt="OpenVPN TEST 1" />
   </div>
 </section>
 
@@ -221,17 +188,17 @@
 </footer>
 
 <script>
-  function showImage(id) {
-    // 모든 이미지 숨기기
+  function showImage(imageList) {
     document.querySelectorAll('main img').forEach(img => {
       img.style.display = 'none';
     });
-    // 선택한 이미지만 표시
-    const img = document.getElementById(id);
-    if (img) {
-      img.style.display = 'block';
-      img.scrollIntoView({behavior: 'smooth', block: 'center'});
-    }
+    imageList.forEach(fileName => {
+      const img = document.querySelector(`img[src="images/${fileName}"]`);
+      if (img) {
+        img.style.display = 'block';
+        img.scrollIntoView({behavior: 'smooth', block: 'center'});
+      }
+    });
   }
 </script>
 
