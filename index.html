@@ -1,1 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>최승환 PORTFOLIO PAGE</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+  }
+  header {
+    text-align: center;
+    padding: 3rem 1rem 1rem;
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #0ff;
+  }
+  header .subtitle {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: #0ff;
+    text-shadow: 0 0 8px #00ffff;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto 5rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 20px #00ffffaa;
+  }
+  h2 {
+    border-bottom: 2px solid #0ff;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px #0ff;
+  }
+  section.project {
+    margin-bottom: 3rem;
+  }
+  .project img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ffff88;
+    margin-top: 1rem;
+    display: none;
+  }
+  .project-item {
+    margin-bottom: 1.2rem;
+  }
+  .project-item button {
+    margin-left: 1rem;
+    background: linear-gradient(45deg, #00ffff, #006666);
+    border: none;
+    color: #000;
+    padding: 0.4rem 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00ffff;
+    transition: background 0.3s ease;
+  }
+  .project-item button:hover {
+    background: linear-gradient(45deg, #0ff, #009999);
+    color: #fff;
+  }
+  footer {
+    text-align: center;
+    color: #0ff;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  최승환<br />
+  <span class="subtitle">⚡️ PORTFOLIO PAGE ⚡️</span>
+</header>
+
+<main>
+
+<section class="project">
+  <h2>&lt; CISCO ASAv ACL TEST &gt;</h2>
+
+  <div class="project-item">
+    1. FireFOX3 -&gt; INSIDE : HTTP, TELNET 접속
+    <button onclick="showImage('cisco1')">RESULT</button>
+    <img id="cisco1" src="images/cisco1.jpg" alt="CISCO ASAv ACL TEST 1" />
+  </div>
+
+  <div class="project-item">
+    2. Webterm2 -&gt; DMZ : TELNET 접속
+    <button onclick="showImage('cisco2')">RESULT</button>
+    <img id="cisco2" src="images/cisco2.jpg" alt="CISCO ASAv ACL TEST 2" />
+  </div>
+
+  <div class="project-item">
+    3. PC1 -&gt; Webterm1 : Ping 가능
+    <button onclick="showImage('cisco3')">RESULT</button>
+    <img id="cisco3" src="images/cisco3.jpg" alt="CISCO ASAv ACL TEST 3" />
+  </div>
+
+  <div class="project-item">
+    4. Webterm1 -&gt; R1 : HTTP, TELNET 접속
+    <button onclick="showImage('cisco4')">RESULT</button>
+    <img id="cisco4" src="images/cisco4.jpg" alt="CISCO ASAv ACL TEST 4" />
+  </div>
+
+  <div class="project-item">
+    5. Webterm2 -&gt; PC1 : Ping 가능
+    <button onclick="showImage('cisco5')">RESULT</button>
+    <img id="cisco5" src="images/cisco5.jpg" alt="CISCO ASAv ACL TEST 5" />
+  </div>
+</section>
+
+<section class="project">
+  <h2>&lt; SNORT3 RULE TEST &gt;</h2>
+
+  <div class="project-item">
+    1. Win10 -&gt; OSSEC : http, ping 탐지
+    <button onclick="showImage('snort1')">RESULT</button>
+    <img id="snort1" src="images/snort1.jpg" alt="SNORT3 RULE TEST 1" />
+  </div>
+
+  <div class="project-item">
+    2. CentOS7 -&gt; Win10 : ping 탐지
+    <button onclick="showImage('snort2')">RESULT</button>
+    <img id="snort2" src="images/snort2.jpg" alt="SNORT3 RULE TEST 2" />
+  </div>
+
+  <div class="project-item">
+    3. HIDS -&gt; CentOS7 : /etc/passwd command injection 공격 탐지
+    <button onclick="showImage('snort3')">RESULT</button>
+    <img id="snort3" src="images/snort3.jpg" alt="SNORT3 RULE TEST 3" />
+  </div>
+
+  <div class="project-item">
+    4. Kali -&gt; Win10 : Rand Source Attack DDoS 공격 탐지
+    <button onclick="showImage('snort4')">RESULT</button>
+    <img id="snort4" src="images/snort4.jpg" alt="SNORT3 RULE TEST 4" />
+  </div>
+
+  <div class="project-item">
+    5. Kali -&gt; CentOS7 : SYN Flag Scanning 탐지
+    <button onclick="showImage('snort5')">RESULT</button>
+    <img id="snort5" src="images/snort5.jpg" alt="SNORT3 RULE TEST 5" />
+  </div>
+</section>
+
+<section class="project">
+  <h2>&lt; SURICATA RULE TEST &gt;</h2>
+
+  <div class="project-item">
+    1. Win10 -&gt; OSSEC : http, ping 탐지
+    <button onclick="showImage('suricata1')">RESULT</button>
+    <img id="suricata1" src="images/suricata1.jpg" alt="SURICATA RULE TEST 1" />
+  </div>
+
+  <div class="project-item">
+    2. CentOS7 -&gt; Win10 : ping 탐지
+    <button onclick="showImage('suricata2')">RESULT</button>
+    <img id="suricata2" src="images/suricata2.jpg" alt="SURICATA RULE TEST 2" />
+  </div>
+
+  <div class="project-item">
+    3. HIDS -&gt; CentOS7 : /etc/passwd command injection 공격 탐지
+    <button onclick="showImage('suricata3')">RESULT</button>
+    <img id="suricata3" src="images/suricata3.jpg" alt="SURICATA RULE TEST 3" />
+  </div>
+
+  <div class="project-item">
+    4. Kali -&gt; Win10 : Rand Source Attack DDoS 공격 탐지
+    <button onclick="showImage('suricata4')">RESULT</button>
+    <img id="suricata4" src="images/suricata4.jpg" alt="SURICATA RULE TEST 4" />
+  </div>
+
+  <div class="project-item">
+    5. Kali -&gt; CentOS7 : SYN Flag Scanning 탐지
+    <button onclick="showImage('suricata5')">RESULT</button>
+    <img id="suricata5" src="images/suricata5.jpg" alt="SURICATA RULE TEST 5" />
+  </div>
+</section>
+
+<section class="project">
+  <h2>&lt; OSSEC(HIDS) TEST &gt;</h2>
+
+  <div class="project-item">
+    1. SERVER -&gt; AGENT 등록
+    <button onclick="showImage('ossec1')">RESULT</button>
+    <img id="ossec1" src="images/ossec1.jpg" alt="OSSEC TEST 1" />
+  </div>
+
+  <div class="project-item">
+    2. SERVER -&gt; AGENT 감지
+    <button onclick="showImage('ossec2')">RESULT</button>
+    <img id="ossec2" src="images/ossec2.jpg" alt="OSSEC TEST 2" />
+  </div>
+</section>
+
+<section class="project">
+  <h2>&lt; OpenVPN TEST &gt;</h2>
+
+  <div class="project-item">
+    1. 정상 동작 확인
+    <button onclick="showImage('openvpn1')">RESULT</button>
+    <img id="openvpn1" src="images/openvpn1.jpg" alt="OpenVPN TEST 1" />
+  </div>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2025 최승환 PORTFOLIO
+</footer>
+
+<script>
+  function showImage(id) {
+    // 모든 이미지 숨기기
+    document.querySelectorAll('main img').forEach(img => {
+      img.style.display = 'none';
+    });
+    // 선택한 이미지만 표시
+    const img = document.getElementById(id);
+    if (img) {
+      img.style.display = 'block';
+      img.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+  }
+</script>
+
+</body>
+</html>
