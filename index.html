@@ -109,6 +109,75 @@
 <main>
 
 <section class="project">
+  <h2>&lt; CISCO ASAv ACL TEST &gt;</h2>
+
+  <div class="project-item">
+    1. FireFOX3 -&gt; INSIDE : HTTP, TELNET 접속
+    <button type="button" onclick="showImage(['1FF3_IN_http.JPG'])">RESULT</button>
+    <img src="images/1FF3_IN_http.JPG" alt="CISCO ASAv ACL TEST 1" />
+  </div>
+
+  <div class="project-item">
+    2. Webterm2 -&gt; DMZ : TELNET 접속
+    <button type="button" onclick="showImage(['2W2_DMZ_telnet.JPG'])">RESULT</button>
+    <img src="images/2W2_DMZ_telnet.JPG" alt="CISCO ASAv ACL TEST 2" />
+  </div>
+
+  <div class="project-item">
+    3. PC1 -&gt; Webterm1 : Ping 가능
+    <button type="button" onclick="showImage(['3PC1_W1_ping.JPG'])">RESULT</button>
+    <img src="images/3PC1_W1_ping.JPG" alt="CISCO ASAv ACL TEST 3" />
+  </div>
+
+  <div class="project-item">
+    4. Webterm1 -&gt; R1 : HTTP, TELNET 접속
+    <button type="button" onclick="showImage(['4W1_DMZ_http_telnet.JPG'])">RESULT</button>
+    <img src="images/4W1_DMZ_http_telnet.JPG" alt="CISCO ASAv ACL TEST 4" />
+  </div>
+
+  <div class="project-item">
+    5. Webterm2 -&gt; PC1 : Ping 가능
+    <button type="button" onclick="showImage(['5W2_IN_ping.JPG'])">RESULT</button>
+    <img src="images/5W2_IN_ping.JPG" alt="CISCO ASAv ACL TEST 5" />
+  </div>
+</section>
+
+<section class="project">
+  <h2>&lt; SNORT3 RULE TEST &gt;</h2>
+
+  <div class="project-item">
+    1. Win10 -&gt; OSSEC : http, ping 탐지
+    <button type="button" onclick="showImage(['1W10_OE_http.JPG', '1W10_OE_ping.JPG'])">RESULT</button>
+    <img src="images/1W10_OE_http.JPG" alt="SNORT3 RULE TEST 1-1" />
+    <img src="images/1W10_OE_ping.JPG" alt="SNORT3 RULE TEST 1-2" />
+  </div>
+
+  <div class="project-item">
+    2. CentOS7 -&gt; Win10 : ping 탐지
+    <button type="button" onclick="showImage(['2CS_W10_ping.JPG'])">RESULT</button>
+    <img src="images/2CS_W10_ping.JPG" alt="SNORT3 RULE TEST 2" />
+  </div>
+
+  <div class="project-item">
+    3. HIDS -&gt; CentOS7 : /etc/passwd command injection 공격 탐지
+    <button type="button" onclick="showImage(['3HD_CS_passwd.JPG'])">RESULT</button>
+    <img src="images/3HD_CS_passwd.JPG" alt="SNORT3 RULE TEST 3" />
+  </div>
+
+  <div class="project-item">
+    4. Kali -&gt; Win10 : Rand Source Attack DDoS 공격 탐지
+    <button type="button" onclick="showImage(['4Kali_W10_DDoS.JPG'])">RESULT</button>
+    <img src="images/4Kali_W10_DDoS.JPG" alt="SNORT3 RULE TEST 4" />
+  </div>
+
+  <div class="project-item">
+    5. Kali -&gt; CentOS7 : SYN Flag Scanning 탐지
+    <button type="button" onclick="showImage(['5kali_CS_SYN.JPG'])">RESULT</button>
+    <img src="images/5kali_CS_SYN.JPG" alt="SNORT3 RULE TEST 5" />
+  </div>
+</section>
+
+<section class="project">
   <h2>&lt; SURICATA RULE TEST &gt;</h2>
 
   <div class="project-item">
@@ -143,6 +212,32 @@
   </div>
 </section>
 
+<section class="project">
+  <h2>&lt; OSSEC(HIDS) TEST &gt;</h2>
+
+  <div class="project-item">
+    1. SERVER -&gt; AGENT 등록
+    <button type="button" onclick="showImage(['HIDS_AG_1.JPG'])">RESULT</button>
+    <img src="images/HIDS_AG_1.JPG" alt="OSSEC TEST 1" />
+  </div>
+
+  <div class="project-item">
+    2. SERVER -&gt; AGENT 감지
+    <button type="button" onclick="showImage(['HIDS_AG_2.JPG'])">RESULT</button>
+    <img src="images/HIDS_AG_2.JPG" alt="OSSEC TEST 2" />
+  </div>
+</section>
+
+<section class="project">
+  <h2>&lt; OpenVPN TEST &gt;</h2>
+
+  <div class="project-item">
+    1. 정상 동작 확인
+    <button type="button" onclick="showImage(['openvpn.JPG'])">RESULT</button>
+    <img src="images/openvpn.JPG" alt="OpenVPN TEST 1" />
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -151,17 +246,17 @@
 
 <script>
   function showImage(imageList) {
-    console.log("이미지 리스트:", imageList);
     document.querySelectorAll('main img').forEach(img => {
       img.style.display = 'none';
     });
+
     imageList.forEach(fileName => {
       const img = document.querySelector(`img[src="images/${fileName}"]`);
       if (img) {
         img.style.display = 'block';
         img.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
-        console.warn(`이미지를 찾을 수 없음: ${fileName}`);
+        console.warn("이미지 없음:", fileName);
       }
     });
   }
