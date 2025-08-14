@@ -181,33 +181,33 @@
 
   <div class="project-item">
     1. Win10 -&gt; OSSEC : http, ping 탐지
-    <button onclick="showImage(['suricata1_1.JPG', 'suricata1_2.JPG'])">RESULT</button>
-    <img src="images/suricata1_1.JPG" alt="SURICATA RULE TEST 1-1" />
-    <img src="images/suricata1_2.JPG" alt="SURICATA RULE TEST 1-2" />
+    <button onclick="showImage(['S_1_http.JPG', 'S_1_ping.JPG'])">RESULT</button>
+    <img src="images/S_1_http.JPG" alt="SURICATA RULE TEST 1-1" />
+    <img src="images/S_1_ping.JPG" alt="SURICATA RULE TEST 1-2" />
   </div>
 
   <div class="project-item">
     2. CentOS7 -&gt; Win10 : ping 탐지
-    <button onclick="showImage(['suricata2.JPG'])">RESULT</button>
-    <img src="images/suricata2.JPG" alt="SURICATA RULE TEST 2" />
+    <button onclick="showImage(['S_2_ping.JPG'])">RESULT</button>
+    <img src="images/S_2_ping.JPG" alt="SURICATA RULE TEST 2" />
   </div>
 
   <div class="project-item">
     3. HIDS -&gt; CentOS7 : /etc/passwd command injection 공격 탐지
-    <button onclick="showImage(['suricata3.JPG'])">RESULT</button>
-    <img src="images/suricata3.JPG" alt="SURICATA RULE TEST 3" />
+    <button onclick="showImage(['S_3_pw.JPG'])">RESULT</button>
+    <img src="images/S_3_pw.JPG" alt="SURICATA RULE TEST 3" />
   </div>
 
   <div class="project-item">
     4. Kali -&gt; Win10 : Rand Source Attack DDoS 공격 탐지
-    <button onclick="showImage(['suricata4.JPG'])">RESULT</button>
-    <img src="images/suricata4.JPG" alt="SURICATA RULE TEST 4" />
+    <button onclick="showImage(['S_4_ddos.JPG'])">RESULT</button>
+    <img src="images/S_4_ddos.JPG" alt="SURICATA RULE TEST 4" />
   </div>
 
   <div class="project-item">
     5. Kali -&gt; CentOS7 : SYN Flag Scanning 탐지
-    <button onclick="showImage(['suricata5.JPG'])">RESULT</button>
-    <img src="images/suricata5.JPG" alt="SURICATA RULE TEST 5" />
+    <button onclick="showImage(['S_5_syn.JPG'])">RESULT</button>
+    <img src="images/S_5_syn.JPG" alt="SURICATA RULE TEST 5" />
   </div>
 </section>
 
@@ -246,17 +246,4 @@
 <script>
   function showImage(imageList) {
     document.querySelectorAll('main img').forEach(img => {
-      img.style.display = 'none';
-    });
-    imageList.forEach(fileName => {
-      const img = document.querySelector(`img[src="images/${fileName}"]`);
-      if (img) {
-        img.style.display = 'block';
-        img.scrollIntoView({behavior: 'smooth', block: 'center'});
-      }
-    });
-  }
-</script>
-
-</body>
-</html>
+     
