@@ -5,238 +5,235 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>최승환 PORTFOLIO PAGE</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
 
     body {
       margin: 0;
-      background-color: #000;
-      color: #00FF41;
-      font-family: 'Share Tech Mono', monospace;
-      letter-spacing: 0.05em;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 3rem 1rem 1rem;
-      font-size: 3.5rem;
-      letter-spacing: 0.15em;
-      color: #00FF41;
-      text-shadow: 0 0 10px #00FF41, 0 0 20px #00FF41, 0 0 40px #00FF41;
-      font-weight: 700;
+      padding: 4rem 1rem 2rem;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin: 0;
+      color: #222;
     }
 
     header .subtitle {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+      color: #777;
       margin-top: 0.5rem;
-      color: #00FF41;
-      text-shadow: 0 0 8px #00FF41;
+      letter-spacing: 0.05em;
     }
 
     main {
-      max-width: 900px;
-      margin: 2rem auto 5rem;
-      background: rgba(0, 0, 0, 0.9);
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 0 30px #00FF41aa;
-      border: 1px solid #00FF41;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
 
     h2 {
-      border-bottom: 2px solid #00FF41;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 6px #00FF41;
-      font-weight: 600;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin: 3rem 0 1.5rem;
+      color: #1a1a1a;
+      border-left: 4px solid #333;
+      padding-left: 0.8rem;
     }
 
     section.project {
-      margin-bottom: 3rem;
-    }
-
-    .project img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 15px #00FF4188;
-      margin-top: 1rem;
-      display: none;
-      border: 1px solid #00FF41;
+      margin-bottom: 4rem;
     }
 
     .project-item {
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
     }
 
-    .project-item button {
-      type: button;
-      margin-left: 1rem;
-      background: linear-gradient(45deg, #00FF41, #003300);
+    .project-text {
+      flex: 1 1 300px;
+    }
+
+    .project-text p {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .project-text button {
+      margin-top: 0.8rem;
+      background-color: #2c3e50;
+      color: #fff;
       border: none;
-      color: #000;
-      padding: 0.4rem 1rem;
-      font-weight: 700;
-      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
       cursor: pointer;
-      box-shadow: 0 0 10px #00FF41;
-      transition: background 0.3s ease;
-      font-family: 'Share Tech Mono', monospace;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
 
-    .project-item button:hover {
-      background: linear-gradient(45deg, #00FF7F, #006600);
-      color: #000;
-      box-shadow: 0 0 15px #00FF7F;
+    .project-text button:hover {
+      background-color: #34495e;
+    }
+
+    .project-image {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-image img {
+      max-width: 100%;
+      max-height: 250px;
+      border-radius: 6px;
+      display: none;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     footer {
       text-align: center;
-      color: #00FF41;
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-      text-shadow: 0 0 6px #00FF41;
-      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.85rem;
+      color: #888;
+      margin: 3rem 0 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .project-item {
+        flex-direction: column;
+      }
+
+      .project-image img {
+        max-height: none;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  최승환<br />
-  <span class="subtitle">⚡️ PORTFOLIO PAGE ⚡️</span>
+  <h1>최승환</h1>
+  <div class="subtitle">⚡️ PORTFOLIO PAGE ⚡️</div>
 </header>
 
 <main>
 
-<section class="project">
-  <h2>&lt; CISCO ASAv ACL TEST &gt;</h2>
+  <!-- CISCO ASAv ACL TEST -->
+  <section class="project">
+    <h2>&lt; CISCO ASAv ACL TEST &gt;</h2>
 
-  <div class="project-item">
-    1. FireFOX3 -&gt; INSIDE : HTTP, TELNET 접속
-    <button type="button" onclick="showImage(['1FF3_IN_http.JPG'])">RESULT</button>
-    <img src="images/1FF3_IN_http.JPG" alt="CISCO ASAv ACL TEST 1" />
-  </div>
+    <div class="project-item">
+      <div class="project-text">
+        <p>1. FireFOX3 -&gt; INSIDE : HTTP, TELNET 접속</p>
+        <button onclick="showImage('img1')">RESULT</button>
+      </div>
+      <div class="project-image">
+        <img id="img1" src="images/1FF3_IN_http.JPG" alt="ACL TEST 1">
+      </div>
+    </div>
 
-  <div class="project-item">
-    2. Webterm2 -&gt; DMZ : TELNET 접속
-    <button type="button" onclick="showImage(['2W2_DMZ_telnet.JPG'])">RESULT</button>
-    <img src="images/2W2_DMZ_telnet.JPG" alt="CISCO ASAv ACL TEST 2" />
-  </div>
+    <div class="project-item">
+      <div class="project-text">
+        <p>2. Webterm2 -&gt; DMZ : TELNET 접속</p>
+        <button onclick="showImage('img2')">RESULT</button>
+      </div>
+      <div class="project-image">
+        <img id="img2" src="images/2W2_DMZ_telnet.JPG" alt="ACL TEST 2">
+      </div>
+    </div>
 
-  <div class="project-item">
-    3. PC1 -&gt; Webterm1 : Ping 가능
-    <button type="button" onclick="showImage(['3PC1_W1_ping.JPG'])">RESULT</button>
-    <img src="images/3PC1_W1_ping.JPG" alt="CISCO ASAv ACL TEST 3" />
-  </div>
+    <!-- 동일한 방식으로 계속 추가 -->
+  </section>
 
-  <div class="project-item">
-    4. Webterm1 -&gt; R1 : HTTP, TELNET 접속
-    <button type="button" onclick="showImage(['4W1_DMZ_http_telnet.JPG'])">RESULT</button>
-    <img src="images/4W1_DMZ_http_telnet.JPG" alt="CISCO ASAv ACL TEST 4" />
-  </div>
+  <!-- SNORT3 RULE TEST -->
+  <section class="project">
+    <h2>&lt; SNORT3 RULE TEST &gt;</h2>
 
-  <div class="project-item">
-    5. Webterm2 -&gt; PC1 : Ping 가능
-    <button type="button" onclick="showImage(['5W2_IN_ping.JPG'])">RESULT</button>
-    <img src="images/5W2_IN_ping.JPG" alt="CISCO ASAv ACL TEST 5" />
-  </div>
-</section>
+    <div class="project-item">
+      <div class="project-text">
+        <p>1. Win10 -&gt; OSSEC : http, ping 탐지</p>
+        <button onclick="showImage('img3'); showImage('img4')">RESULT</button>
+      </div>
+      <div class="project-image">
+        <img id="img3" src="images/1W10_OE_http.JPG" alt="SNORT3 1-1">
+        <img id="img4" src="images/1W10_OE_ping.JPG" alt="SNORT3 1-2">
+      </div>
+    </div>
 
-<section class="project">
-  <h2>&lt; SNORT3 RULE TEST &gt;</h2>
+    <div class="project-item">
+      <div class="project-text">
+        <p>2. CentOS7 -&gt; Win10 : ping 탐지</p>
+        <button onclick="showImage('img5')">RESULT</button>
+      </div>
+      <div class="project-image">
+        <img id="img5" src="images/2CS_W10_ping.JPG" alt="SNORT3 2">
+      </div>
+    </div>
+  </section>
 
-  <div class="project-item">
-    1. Win10 -&gt; OSSEC : http, ping 탐지
-    <button type="button" onclick="showImage(['1W10_OE_http.JPG', '1W10_OE_ping.JPG'])">RESULT</button>
-    <img src="images/1W10_OE_http.JPG" alt="SNORT3 RULE TEST 1-1" />
-    <img src="images/1W10_OE_ping.JPG" alt="SNORT3 RULE TEST 1-2" />
-  </div>
+  <!-- SURICATA RULE TEST -->
+  <section class="project">
+    <h2>&lt; SURICATA RULE TEST &gt;</h2>
 
-  <div class="project-item">
-    2. CentOS7 -&gt; Win10 : ping 탐지
-    <button type="button" onclick="showImage(['2CS_W10_ping.JPG'])">RESULT</button>
-    <img src="images/2CS_W10_ping.JPG" alt="SNORT3 RULE TEST 2" />
-  </div>
+    <div class="project-item">
+      <div class="project-text">
+        <p>1. Win10 -&gt; OSSEC : http, ping 탐지</p>
+        <button onclick="showImage('img6'); showImage('img7')">RESULT</button>
+      </div>
+      <div class="project-image">
+        <img id="img6" src="images/S_1_http.JPG" alt="SURICATA 1-1">
+        <img id="img7" src="images/S_1_ping.JPG" alt="SURICATA 1-2">
+      </div>
+    </div>
+  </section>
 
-  <div class="project-item">
-    3. HIDS -&gt; CentOS7 : /etc/passwd command injection 공격 탐지
-    <button type="button" onclick="showImage(['3HD_CS_passwd.JPG'])">RESULT</button>
-    <img src="images/3HD_CS_passwd.JPG" alt="SNORT3 RULE TEST 3" />
-  </div>
+  <!-- OSSEC(HIDS) TEST -->
+  <section class="project">
+    <h2>&lt; OSSEC(HIDS) TEST &gt;</h2>
 
-  <div class="project-item">
-    4. Kali -&gt; Win10 : Rand Source Attack DDoS 공격 탐지
-    <button type="button" onclick="showImage(['4Kali_W10_DDoS.JPG'])">RESULT</button>
-    <img src="images/4Kali_W10_DDoS.JPG" alt="SNORT3 RULE TEST 4" />
-  </div>
+    <div class="project-item">
+      <div class="project-text">
+        <p>1. SERVER -&gt; AGENT 등록</p>
+        <button onclick="showImage('img8')">RESULT</button>
+      </div>
+      <div class="project-image">
+        <img id="img8" src="images/HIDS_AG_1.JPG" alt="OSSEC 1">
+      </div>
+    </div>
+  </section>
 
-  <div class="project-item">
-    5. Kali -&gt; CentOS7 : SYN Flag Scanning 탐지
-    <button type="button" onclick="showImage(['5kali_CS_SYN.JPG'])">RESULT</button>
-    <img src="images/5kali_CS_SYN.JPG" alt="SNORT3 RULE TEST 5" />
-  </div>
-</section>
+  <!-- OpenVPN TEST -->
+  <section class="project">
+    <h2>&lt; OpenVPN TEST &gt;</h2>
 
-<section class="project">
-  <h2>&lt; SURICATA RULE TEST &gt;</h2>
-
-  <div class="project-item">
-    1. Win10 -&gt; OSSEC : http, ping 탐지
-    <button type="button" onclick="showImage(['S_1_http.JPG', 'S_1_ping.JPG'])">RESULT</button>
-    <img src="images/S_1_http.JPG" alt="SURICATA RULE TEST 1-1" />
-    <img src="images/S_1_ping.JPG" alt="SURICATA RULE TEST 1-2" />
-  </div>
-
-  <div class="project-item">
-    2. CentOS7 -&gt; Win10 : ping 탐지
-    <button type="button" onclick="showImage(['S_2_ping.JPG'])">RESULT</button>
-    <img src="images/S_2_ping.JPG" alt="SURICATA RULE TEST 2" />
-  </div>
-
-  <div class="project-item">
-    3. HIDS -&gt; CentOS7 : /etc/passwd command injection 공격 탐지
-    <button type="button" onclick="showImage(['S_3_pw.JPG'])">RESULT</button>
-    <img src="images/S_3_pw.JPG" alt="SURICATA RULE TEST 3" />
-  </div>
-
-  <div class="project-item">
-    4. Kali -&gt; Win10 : Rand Source Attack DDoS 공격 탐지
-    <button type="button" onclick="showImage(['S_4_ddos.JPG'])">RESULT</button>
-    <img src="images/S_4_ddos.JPG" alt="SURICATA RULE TEST 4" />
-  </div>
-
-  <div class="project-item">
-    5. Kali -&gt; CentOS7 : SYN Flag Scanning 탐지
-    <button type="button" onclick="showImage(['S_5_syn.JPG'])">RESULT</button>
-    <img src="images/S_5_syn.JPG" alt="SURICATA RULE TEST 5" />
-  </div>
-</section>
-
-<section class="project">
-  <h2>&lt; OSSEC(HIDS) TEST &gt;</h2>
-
-  <div class="project-item">
-    1. SERVER -&gt; AGENT 등록
-    <button type="button" onclick="showImage(['HIDS_AG_1.JPG'])">RESULT</button>
-    <img src="images/HIDS_AG_1.JPG" alt="OSSEC TEST 1" />
-  </div>
-
-  <div class="project-item">
-    2. SERVER -&gt; AGENT 감지
-    <button type="button" onclick="showImage(['HIDS_AG_2.JPG'])">RESULT</button>
-    <img src="images/HIDS_AG_2.JPG" alt="OSSEC TEST 2" />
-  </div>
-</section>
-
-<section class="project">
-  <h2>&lt; OpenVPN TEST &gt;</h2>
-
-  <div class="project-item">
-    1. 정상 동작 확인
-    <button type="button" onclick="showImage(['openvpn.JPG'])">RESULT</button>
-    <img src="images/openvpn.JPG" alt="OpenVPN TEST 1" />
-  </div>
-</section>
+    <div class="project-item">
+      <div class="project-text">
+        <p>1. 정상 동작 확인</p>
+        <button onclick="showImage('img9')">RESULT</button>
+      </div>
+      <div class="project-image">
+        <img id="img9" src="images/openvpn.JPG" alt="OpenVPN">
+      </div>
+    </div>
+  </section>
 
 </main>
 
@@ -245,20 +242,16 @@
 </footer>
 
 <script>
-  function showImage(imageList) {
-    document.querySelectorAll('main img').forEach(img => {
+  function showImage(imageId) {
+    document.querySelectorAll('.project-image img').forEach(img => {
       img.style.display = 'none';
     });
 
-    imageList.forEach(fileName => {
-      const img = document.querySelector(`img[src="images/${fileName}"]`);
-      if (img) {
-        img.style.display = 'block';
-        img.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } else {
-        console.warn("이미지 없음:", fileName);
-      }
-    });
+    const target = document.getElementById(imageId);
+    if (target) {
+      target.style.display = 'block';
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 </script>
 
